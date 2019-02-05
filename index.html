@@ -1,78 +1,13 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133833019-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+---
+layout: default
+title: Home
+---
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'UA-133833019-1');
-    </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>La Rue d'Auseil</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/css/ruedauseil.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<div class="profile">
-    <div class="profile__image">
-        <img src="https://instagram.fmad3-7.fna.fbcdn.net/vp/d12db8567c40d5bd2eafeb3927db9d09/5CF3F902/t51.2885-19/s320x320/47690457_333505223908002_8536426944533626880_n.jpg?_nc_ht=instagram.fmad3-7.fna.fbcdn.net"
-             alt="Profile image">
-    </div>
-
-    <div class="profile__buttons">
-        <a href="https://society6.com/ruedauseil" target="_blank"
-           class="profile__buttons__button profile__buttons__button--color-orange">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" x="0" y="0">
-                <rect x="0" y="0" width="100%" height="100%"></rect>
-            </svg>
-            <span>SHOP</span>
-        </a>
-
-        <a href="https://www.facebook.com/ruedauseil" target="_blank"
-           class="profile__buttons__button profile__buttons__button--color-blue profile__buttons__button--narrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" x="0" y="0">
-                <rect x="0" y="0" width="100%" height="100%"></rect>
-            </svg>
-            <span class="icon-facebook"></span>
-        </a>
-
-        <a href="mailto:la.rue.dauseil@gmail.com" target="_blank"
-           class="profile__buttons__button profile__buttons__button--color-blue profile__buttons__button--narrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" x="0" y="0">
-                <rect x="0" y="0" width="100%" height="100%"></rect>
-            </svg>
-            <span class="icon-mail"></span>
-        </a>
-    </div>
-
-</div>
-
-<!-- COLOR GRADIENTS -->
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" x="0" y="0">
-    <defs>
-        <linearGradient id="blueGradient">
-            <stop offset="35%" stop-color="#0c66b5"/>
-            <stop offset="83%" stop-color="#6d0dec"/>
-        </linearGradient>
-        <linearGradient id="orangeGradient">
-            <stop offset="35%" stop-color="#ffc100"/>
-            <stop offset="83%" stop-color="#ff0000"/>
-        </linearGradient>
-    </defs>
-</svg>
-
-</body>
-</html>
+<ul>
+    {% for post in site.posts %}
+    <li>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt }}</p>
+    </li>
+    {% endfor %}
+</ul>

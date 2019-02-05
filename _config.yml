@@ -1,0 +1,11 @@
+# Site settings
+title: La Rue d'Auseil
+email: la.rue.dauseil@gmail.com
+author: Natália Rio
+description:
+url:
+
+# Build settings
+permalink: :title/
+sass:
+  sass_dir: assets/css

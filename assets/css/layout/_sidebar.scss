@@ -1,0 +1,20 @@
+.sidebar {
+  background-color: #d5d5d5;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+  &__logo {
+    border-radius: 100%;
+    width: fit-content;
+    height: fit-content;
+    min-height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba(#000, 0.05);
+
+    img {
+      width: 200px;
+    }
+  }
+}

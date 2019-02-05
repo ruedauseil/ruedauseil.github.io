@@ -1,0 +1,6 @@
+- name: Shop
+  link: https://society6.com/ruedauseil
+  class: btn btn-orange
+- name: Facebook
+  link: https://www.facebook.com/ruedauseil
+  class: btn btn-blue

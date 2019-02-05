@@ -1,0 +1,56 @@
+.btn {
+  padding: 10px 0;
+  margin: 10px 0;
+  width: 100%;
+  position: relative;
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  border: 0;
+  text-transform: uppercase;
+  background-image: radial-gradient(#ffffff7d, transparent);
+  transition: text-shadow .3s;
+
+  &:hover {
+    text-shadow: 0 0 6px #fff;
+  }
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: transparent;
+
+    rect {
+      stroke-width: 4;
+      stroke-dasharray: 20% 10% 110% 3% 164% 3%;
+      transition: 1s all ease;
+
+      &:hover {
+        stroke-dashoffset: -554;
+        stroke-dasharray: 20% 0 108% 0 170% 0 500% 0;
+      }
+    }
+  }
+
+  &.btn-default {
+    $linkColor: #0c66b5;
+    stroke: url(#defaultGradient);
+    border-color: $linkColor;
+    color: $linkColor;
+  }
+
+  &.btn-orange {
+    $linkColor: #FF7000;
+    stroke: url(#orangeGradient);
+    border-color: $linkColor;
+    color: $linkColor;
+  }
+
+  &.btn-blue {
+    $linkColor: #0c66b5;
+    stroke: url(#blueGradient);
+    border-color: $linkColor;
+    color: $linkColor;
+  }
+}

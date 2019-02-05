@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 sidebar">
+            <div class="sidebar__logo">
+                <img src="https://instagram.fmad3-7.fna.fbcdn.net/vp/d12db8567c40d5bd2eafeb3927db9d09/5CF3F902/t51.2885-19/s320x320/47690457_333505223908002_8536426944533626880_n.jpg?_nc_ht=instagram.fmad3-7.fna.fbcdn.net"
+                     alt="Profile image">
+            </div>
+
+            <div class="sidebar__buttons">
+                {% include links.html %}
+            </div>
+        </div>
+        <div class="col-sm-9 main">
+            {{ content }}
+        </div>
+    </div>
+</div>
+
+{% include buttonGradients.html %}
+
+</body>
+</html>
