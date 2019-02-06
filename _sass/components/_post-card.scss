@@ -1,0 +1,118 @@
+/*------------------------------------*\
+  Components > Post Card
+\*------------------------------------*/
+
+.c-post-card {
+  overflow: hidden;
+  transform: translateX(0);
+  margin-bottom: double($base-spacing-unit);
+  background-color: transparent;
+  border-bottom: 1px solid $color-border;
+
+  &__image-link {
+    display: block;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      content: '';
+      background-color: $bg-color-dark;
+      transition: $global-transition;
+      opacity: 0;
+    }
+  }
+
+  &__image {
+    @include mq($from: tablet) {
+      opacity: 0;
+      transition: opacity $global-transition ease-in-out;
+
+      &.is-inview {
+        opacity: 1;
+      }
+
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__info {
+    display: block;
+    padding: $base-spacing-unit 0;
+    text-decoration: none;
+    background-color: transparent;
+
+    &--no-image {
+      padding-top: 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $color-text;
+    }
+  }
+
+  &__title {
+    margin-bottom: half($font-size-base);
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-medium;
+    font-family: $font-sans-serif;
+    transition: $global-transition;
+    display: inline-block;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      height: 1em;
+      width: 100%;
+      border-bottom: 6px solid $color-brand;
+      margin-top: 10px;
+      opacity: 0;
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+      -webkit-transform: scale(0, 1);
+      transform: scale(0, 1);
+    }
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: quarter($line-height-base);
+    font-size: $font-size-tiny;
+    font-family: $font-sans-serif;
+    line-height: $line-height-small;
+    text-transform: uppercase;
+    color: lighten($bg-color, 30%);
+  }
+
+  &:hover {
+    .c-post-card__image-link:after {
+      opacity: .1;
+    }
+
+    .c-post-card__title:after {
+      opacity: 0.2;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+
+  &__excerpt {
+    margin-bottom: half($font-size-base);
+  }
+
+  &__featured-icon {
+    position: absolute;
+    bottom: quarter($line-height-base);
+    left: quarter($line-height-base);
+    fill: #e1ad57;
+  }
+}
