@@ -1,6 +1,28 @@
 ---
 ---
 
-body {
+@import '../_sass/settings/_all';
 
+.c-content > p:first-child::first-letter {
+  float: none;
+  height: inherit;
+  margin-top: inherit;
+  margin-right: inherit;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+
+  &::selection {
+    background-color: $color-brand !important;
+  }
+}
+
+
+[data-align="center"] {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

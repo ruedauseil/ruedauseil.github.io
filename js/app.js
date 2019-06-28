@@ -151,8 +151,8 @@ $(document).ready(function() {
     get: 'user',
     limit: 6,
     resolution: 'thumbnail',
-    userId: '441902919',
-    accessToken: '441902919.1677ed0.ab9040eff64249dcbfb19b6d48b4e909',
+    userId: '9002654771',
+    accessToken: '9002654771.1677ed0.54300892059e4fdb9036d39430516fa1',
     template:
       '<div class="c-widget-instagram__item"><a href="{{link}}" title="{{caption}}" aria-label="{{caption}}" target="_blank"><img src="{{image}}"></a></div>'
   });
