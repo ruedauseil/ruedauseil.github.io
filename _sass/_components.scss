@@ -65,3 +65,25 @@
     text-transform: uppercase;
   }
 }
+
+// To top
+#to-top {
+  position: fixed;
+  right: 0;
+  background-color: rgba($color-main, .7);
+  color: #fff;
+  bottom: 0;
+  margin: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 1.5em;
+  transition: background-color .3s ease;
+
+  &:hover {
+    color: #fff;
+    background-color: $color-main;
+  }
+}
