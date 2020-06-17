@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Going to stand by and see another Marine die just to live
 author: ahmad
 tags: [frontpage, jekyll, blog]

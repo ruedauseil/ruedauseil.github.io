@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: How can I trust a man who won't eat a good old-fashioned American
 author: ahmad
 tags: [frontpage, jekyll, blog]

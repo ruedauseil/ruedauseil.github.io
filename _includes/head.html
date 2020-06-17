@@ -1,27 +1,15 @@
-<head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
+<!-- Normalize -->
+<link rel="stylesheet" href="{{ BASE_PATH }}/assets/css/normalize.css">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name='description' content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <link rel='canonical' href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel='alternate' type='application/rss+xml' title='{{ site.title }}' href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-  <style>
-    {% capture inlineCSS %}
-      {% include app.scss %}
-    {% endcapture %}
+<!-- Theme styles -->
+<link rel="stylesheet" href="{{ BASE_PATH }}/assets/css/auseil.css">
 
-    {{ inlineCSS | scssify }}
-  </style>
-
-  <link rel="stylesheet" href="{{ '/css/overwrite.css' }}">
-
-  <script>
-    var base_url = {{ site.baseurl | jsonify }},
+<script>
+    var base_url = '{{ site.baseurl }}',
         pagination_next_url = base_url + '{{ paginator.next_page_path }}',
         pagination_next_page_number = '{{ paginator.next_page }}',
         pagination_available_pages_number = '{{ paginator.total_pages }}';
-  </script>
-</head>
+</script>

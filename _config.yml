@@ -1,47 +1,40 @@
-# Welcome to Nubia Jekyll Theme!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# bundle exec jekyll serve
 
-theme_version: 1.0.4
+title:        "La Rue d'Auseil"
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl:      "" # the subpath of your site, e.g. /blog
+url:          "https://ruedauseil.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
-# Site settings
-title:              La Rue d&apos;Auseil
-logo:               # Logo image URL
-description:        My portfolio
-baseurl:            '' # The subpath of your site, e.g. /blog
-url:                'https://ruedauseil.github.io/' # The base hostname & protocol for your site
-facebook:           https://www.facebook.com/laruedauseil
-instagram:          https://www.instagram.com/laruedauseil
+defaults:
+- scope:
+    path:     "" # an empty string here means all files in the project
+  values:
+    layout:   "default"
+- scope:
+    path:     "" # an empty string here means all files in the project
+    type:     "posts"
+  values:
+    layout:   "post"
+    permalink: /categories/:categories/:title
+- scope:
+    path: "_pages"
+  values:
+    permalink: /:basename:output_ext
+- scope:
+    path: "/categories"
+  values:
+    layout: "category"
 
-markdown:  kramdown
-permalink: pretty
-paginate:  11
 sass:
-  style: compressed
+  style:      compressed
 
-plugins:
-  - jekyll-paginate
-  - jekyll/tagging
+paginate:     5
 
 include:
-  - _pages
+- _pages
 
-exclude:
-  - vendor
-  - Gemfile
-  - Gemfile.lock
-
-# Tags
-tag_page_dir:         tag
-tag_page_layout:      tag_page
-tag_permalink_style:  pretty
-
-# Pages path
-defaults:
-  - scope:
-      path: '_pages'
-    values:
-      permalink: /:basename:output_ext
+plugins:
+- jekyll-paginate

@@ -1,0 +1,48 @@
+<div class="col-12 text-center">
+	<h1>{{ site.data.i18n.[page.lang].[page.ref] }}</h1>
+	<p>{{ site.data.i18n.[page.lang].["Here you have all our gastronomic offer as well as our best cocktails and wines"] }}</p>
+</div>
+
+<hr/>
+
+<div class="col-12">
+	<div class="row align-items-center">
+		<div class="col-lg-6">
+			<img src="{{ BASE_PATH }}/assets/images/menu/main.jpg" class="img-fluid" />
+		</div>
+
+		<hr class="d-lg-none">
+
+		<div class="col-lg-6">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="content text-center">
+						<p>{{ site.data.i18n.[page.lang].["Nogura menu"] }}</p>
+						<a href="{{ BASE_PATH }}/assets/files/MenuDegustacio.pdf" download="NOGURA - {{ site.data.i18n.[page.lang].['Nogura menu'] }}" target="_blank" class="btn btn-secondary">{{ site.data.i18n.[page.lang].download }}</a>
+					</div>
+				</div>
+				<hr class="d-lg-none">
+				<div class="col-lg-6">
+					<div class="content text-center">
+						<p>{{ site.data.i18n.[page.lang].["À la carte menu"] }}</p>
+						<a href="{{ BASE_PATH }}/assets/files/Carta.pdf" download="NOGURA - {{ site.data.i18n.[page.lang].['À la carte menu'] }}" target="_blank" class="btn btn-secondary">{{ site.data.i18n.[page.lang].download }}</a>
+					</div>
+				</div>
+				<hr class="d-lg-none">
+				<div class="col-lg-6">
+					<div class="content text-center">
+						<p>{{ site.data.i18n.[page.lang].["Wine list"] }}</p>
+						<a href="{{ BASE_PATH }}/assets/files/CartaDeVins.pdf" download="NOGURA - {{ site.data.i18n.[page.lang].['Wine list'] }}" target="_blank" class="btn btn-secondary">{{ site.data.i18n.[page.lang].download }}</a>
+					</div>
+				</div>
+				<hr class="d-lg-none">
+				<div class="col-lg-6">
+					<div class="content text-center">
+						<p>{{ site.data.i18n.[page.lang].["Cocktails list"]] }}</p>
+						<a href="{{ BASE_PATH }}/assets/files/CartaDeCoctels.pdf" download="NOGURA - {{ site.data.i18n.[page.lang].['Cocktails list'] }}" target="_blank" class="btn btn-secondary">{{ site.data.i18n.[page.lang].download }}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

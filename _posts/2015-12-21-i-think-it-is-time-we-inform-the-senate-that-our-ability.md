@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: I think it is time we inform the senate that our ability
 author: ahmad
 tags: [frontpage, jekyll, blog]

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: The senate that our ability to use the force has diminished
 author: ahmad
 tags: [frontpage, jekyll, blog]

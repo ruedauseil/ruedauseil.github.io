@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: It would be totally painless - they'd just slip into unconsciousness
 author: ahmad
 tags: [frontpage, jekyll, blog]

@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Almost too much for sensitive to get paid all day, every day
 author: ahmad
 tags: [frontpage, jekyll, blog]

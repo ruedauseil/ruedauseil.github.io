@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Access main program. Access main security. Access main program grid
 author: ahmad
 tags: [frontpage, jekyll, blog]

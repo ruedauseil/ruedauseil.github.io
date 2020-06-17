@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: You got to cool that off. And that's the double-truth
 featured: true
 author: ahmad
