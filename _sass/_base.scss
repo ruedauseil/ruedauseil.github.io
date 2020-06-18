@@ -7,8 +7,7 @@ $font-weight-bold: 600;
 
 // === Colors === //
 $color-main: #ee6e04;
-$color-second: #6B503F;
-$color-third: #4F1510;
+$color-second: #b10000;
 $color-off: #F4F6F8;
 $color-black: darken($color-off, 75%);
 
@@ -19,6 +18,13 @@ html {
 body {
 	font-family: "Montserrat", sans-serif;
 }
+a {
+    color: initial;
+    &:hover {
+	    color: initial;
+	    text-decoration: none;
+	}
+}
 
 // ==== Backgrounds === //
 .bg-instagram {
@@ -26,4 +32,9 @@ body {
 }
 .bg-dribbble {
 	background: linear-gradient(45deg, #e57650 0%, #ea4c89 100%);
+}
+
+// ==== Categories === //
+.category_design {
+	background-color: #816793;
 }

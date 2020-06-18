@@ -8,6 +8,7 @@ category: Design
 Is there a better way to start a blog than with a cats related post?
 
 **NO, THERE IS NOT**
+<!--more-->
 
 If you have been following me on Instagram, you SURELY have seen my stories (because you have, *haven't you??*), so this 
 will look familiar to you. For those who don't (*shame* on you!), I posted a stories with a cat's design, asking if you 

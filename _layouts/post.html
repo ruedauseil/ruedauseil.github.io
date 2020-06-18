@@ -2,17 +2,15 @@
 layout: default
 ---
 
-<div class='o-wrapper'>
-  <div class='o-grid'>
-    <div class='o-grid__col o-grid__col--2-3-m'>
-      <article class='c-post'>
-
-        <div class='c-content'>
-          {{ content }}
-        </div>
-
-        <hr>
-      </article>
+<div class="post col-sm-12">
+  <div class="row">
+    <div class="col-sm-5">
+      <img src="{{ page.image }}" class="img-fluid" />
+    </div>
+    <div class="col-sm-7">
+      <h1>{{ page.title }}</h1>
+      <p class="post__date">{{ page.date | date: '%d %b %Y' }}</p>
+      {{ content }}
     </div>
   </div>
 </div>

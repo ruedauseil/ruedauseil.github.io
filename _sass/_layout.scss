@@ -23,14 +23,15 @@ header {
 }
 // - social
 .header__social {
-	position: fixed;
-    width: 100%;
-    padding-right: 5px;
+    position: fixed;
     top: 0;
+    z-index: 9999;
+    right: 0;
 
 	.nav-link {
+	    box-shadow: -1px 1px 0px rgba(#fff, .1);
 	    color: #fff;
-	    margin: 0 6px;
+	    margin-right: 10px;
 	    border-bottom-left-radius: 5px;
 	    border-bottom-right-radius: 5px;
 	    font-size: 1.3em;
@@ -77,4 +78,8 @@ header {
 		background-color: initial;
 		color: initial;
 	}
+}
+
+footer {
+	height: 100px;
 }

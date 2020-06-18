@@ -11,6 +11,8 @@ social:
   instagram: https://www.instagram.com/laruedauseil/
   dribbble: https://dribbble.com/nataliario
 
+excerpt_separator: <!--more-->
+
 defaults:
 - scope:
     path:     "" # an empty string here means all files in the project
@@ -34,7 +36,7 @@ defaults:
 sass:
   style:      compressed
 
-paginate:     5
+paginate:     9
 
 include:
 - _pages
