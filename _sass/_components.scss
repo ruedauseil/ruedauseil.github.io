@@ -2,56 +2,120 @@
 
 // To top
 #to-top {
-  position: fixed;
-  right: 0;
-  background-color: rgba($color-second, .7);
-  color: #fff;
-  bottom: 0;
-  margin: 10px;
-  height: 40px;
-  width: 40px;
-  border-radius: 100%;
-  text-align: center;
-  line-height: 1.5em;
-  font-size: 1.5em;
-  transition: background-color .3s ease;
-
-  &:hover {
+    position: fixed;
+    right: 0;
+    background-color: rgba($color-second, .7);
     color: #fff;
-    background-color: $color-second;
-  }
+    bottom: 0;
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 1.5em;
+    transition: background-color .3s ease;
+
+    &:hover {
+        color: #fff;
+        background-color: $color-second;
+    }
 }
 
 // Buttons
 .btn {
-  border-radius: 0;
+    border-radius: 0;
 
-  &.btn-outline-primary {
-    $color: $color-main;
-    border-color: $color;
-    color: $color;
+    &.btn-outline-primary {
+        $color: $color-main;
+        border-color: $color;
+        color: $color;
 
-    &:hover,
-    &:not(:disabled):not(.disabled):active,
-    &:focus {
-      background-color: $color;
-      box-shadow: none;
-      color: #fff;
+        &:hover,
+        &:not(:disabled):not(.disabled):active,
+        &:focus {
+            background-color: $color;
+            box-shadow: none;
+            color: #fff;
+        }
     }
-  }
 
-  &.btn-primary {
-    $color: $color-main;
-    border-color: $color;
-    background-color: $color;
+    &.btn-primary {
+        $color: $color-main;
+        border-color: $color;
+        background-color: $color;
 
-    &:hover,
-    &:not(:disabled):not(.disabled):active,
-    &:focus {
-      background-color: darken($color, 10%);
-      border-color: darken($color, 10%);
-      box-shadow: none;
-      color: #fff;
+        &:hover,
+        &:not(:disabled):not(.disabled):active,
+        &:focus {
+            background-color: darken($color, 10%);
+            border-color: darken($color, 10%);
+            box-shadow: none;
+            color: #fff;
+        }
     }
-  }
+
+    &.btn-secondary {
+        $color: $color-second;
+        border-color: $color;
+        background-color: $color;
+
+        &:hover,
+        &:not(:disabled):not(.disabled):active,
+        &:focus {
+            background-color: darken($color, 10%);
+            border-color: darken($color, 10%);
+            box-shadow: none;
+            color: #fff;
+        }
+    }
+}
+
+.post {
+    $self: &;
+
+    &__category {
+        display: inline-block;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 2px 5px;
+    }
+
+
+    &__title {
+        position: relative;
+        margin-bottom: 0;
+
+        &:after {
+            content: "";
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            border-bottom: none !important;
+            z-index: -1;
+            left: 0;
+            top: 50%;
+        }
+
+        span:last-child {
+            background-color: #fff;
+            padding: 0 10px;
+        }
+    }
+
+    &__content {
+        border-top: none !important;
+        padding-top: 50px;
+    }
+
+    &--design {
+        h1:after {
+            border: solid $color-category-design 2px;
+        }
+
+        #{$self}__content {
+            border: solid $color-category-design 2px;
+        }
+    }
 }

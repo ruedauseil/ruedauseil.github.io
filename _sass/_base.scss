@@ -10,6 +10,8 @@ $color-main: #ee6e04;
 $color-second: #b10000;
 $color-off: #F4F6F8;
 $color-black: darken($color-off, 75%);
+// categories
+$color-category-design: #816793;
 
 // === Resets === //
 html {
@@ -17,6 +19,7 @@ html {
 }
 body {
 	font-family: "Montserrat", sans-serif;
+	color: $color-black;
 }
 a {
     color: initial;
@@ -25,16 +28,35 @@ a {
 	    text-decoration: none;
 	}
 }
-
-// ==== Backgrounds === //
-.bg-instagram {
-	background: linear-gradient(45deg, #F77737 0%, #833AB4 100%);
+h1 {
+	font-weight: $font-weight-bold;
+	font-size: 2em;
 }
+
+// ==== Text colors === //
+.color-white {
+	color: #fff;
+}
+
+// ==== Background colors === //
+.bg-main {
+	background-color: $color-main;
+}
+// Social
 .bg-dribbble {
 	background: linear-gradient(45deg, #e57650 0%, #ea4c89 100%);
 }
+.bg-facebook {
+	background: linear-gradient(45deg, #8b9dc3 0%, #3b5998 100%);
+}
+.bg-instagram {
+	background: linear-gradient(45deg, #F77737 0%, #833AB4 100%);
+}
+.bg-society {
+	background: linear-gradient(45deg, #323232 0%, #000 100%);
+}
 
 // ==== Categories === //
-.category_design {
-	background-color: #816793;
+.category-design {
+	background-color: $color-category-design;
 }

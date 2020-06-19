@@ -1,6 +1,5 @@
 ---
 title: New sticker pack for Telegram!
-tags: [telegram]
 image: '/images/posts/2019-06-27_banner.png'
 category: Design
 ---

@@ -2,7 +2,8 @@
     <a href="{{ post.url | prepend: site.baseurl }}" class="homePost__image"
        style="background-image: url('{{ post.image | prepend: site.baseurl }}')">
    </a>
-	<span class="homePost__category category_{{ post.category | downcase }}">{% if post.category %}{{ post.category }}{% endif %}</span>
+	<span class="homePost__category category-{{ post.category | downcase }}">{% if post.category %}{{ site.data.i18n.["ca"].[post.category] }}{% endif %}</span>
     <h3 class="homePost__title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-    <p class="homePost__date">{{ post.date | date: '%d %b %Y' }}</p>
+    {% assign postMonth = post.date | date: "%b" %}
+    <p class="homePost__date">{{ post.date | date: "%-d" }} {{ site.data.i18n.ca.month.[postMonth] }} {{ post.date | date: "%Y" }}</p>
 </div>

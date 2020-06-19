@@ -23,6 +23,18 @@
       "css": "up",
       "code": 61702,
       "src": "fontawesome"
+    },
+    {
+      "uid": "e4dde1992f787163e2e2b534b8c8067d",
+      "css": "down",
+      "code": 61703,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "77b3693facc3d803417105997b4ffe96",
+      "css": "facebook",
+      "code": 59392,
+      "src": "typicons"
     }
   ]
 }

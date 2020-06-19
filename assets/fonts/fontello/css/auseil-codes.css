@@ -1,4 +1,6 @@
 
+.icon-facebook:before { content: '\e800'; } /* '' */
 .icon-up:before { content: '\f106'; } /* '' */
+.icon-down:before { content: '\f107'; } /* '' */
 .icon-instagram:before { content: '\f16d'; } /* '' */
 .icon-dribbble:before { content: '\f17d'; } /* '' */

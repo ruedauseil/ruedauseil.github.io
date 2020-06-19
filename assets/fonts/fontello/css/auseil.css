@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'auseil';
-  src: url('../font/auseil.eot?79119298');
-  src: url('../font/auseil.eot?79119298#iefix') format('embedded-opentype'),
-       url('../font/auseil.woff2?79119298') format('woff2'),
-       url('../font/auseil.woff?79119298') format('woff'),
-       url('../font/auseil.ttf?79119298') format('truetype'),
-       url('../font/auseil.svg?79119298#auseil') format('svg');
+  src: url('../font/auseil.eot?24568222');
+  src: url('../font/auseil.eot?24568222#iefix') format('embedded-opentype'),
+       url('../font/auseil.woff2?24568222') format('woff2'),
+       url('../font/auseil.woff?24568222') format('woff'),
+       url('../font/auseil.ttf?24568222') format('truetype'),
+       url('../font/auseil.svg?24568222#auseil') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'auseil';
-    src: url('../font/auseil.svg?79119298#auseil') format('svg');
+    src: url('../font/auseil.svg?24568222#auseil') format('svg');
   }
 }
 */
@@ -55,6 +55,8 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
+.icon-facebook:before { content: '\e800'; } /* '' */
 .icon-up:before { content: '\f106'; } /* '' */
+.icon-down:before { content: '\f107'; } /* '' */
 .icon-instagram:before { content: '\f16d'; } /* '' */
 .icon-dribbble:before { content: '\f17d'; } /* '' */

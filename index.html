@@ -15,12 +15,13 @@ pagination:
 
 		    	<div class="col-sm-4">
 		    		{% if post.category %}
-		    			<span class="homePost__category category_{{ post.category | downcase }}">{{ post.category }}</span>
+		    			<span class="homePost__category category-{{ post.category | downcase }}">{{ site.data.i18n.ca.[post.category] }}</span>
 	    			{% endif %}
 				    <h3 class="homePost__title">{{ post.title }}</h3>
-				    <p class="homePost__date">{{ post.date | date: '%d %b %Y' }}</p>
+				    {% assign postMonth = post.date | date: "%b" %}
+				    <p class="homePost__date">{{ post.date | date: "%-d" }} {{ site.data.i18n.ca.month.[postMonth] }} {{ post.date | date: "%Y" }}</p>
 				    <div class="homePost__excerpt">{{ post.excerpt }}</div>
-				    <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-outline-primary homePost__readMore">Read more</a>
+				    <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-outline-primary homePost__readMore">Llegir més</a>
 				</div>
 		    </div>
 		</div>
