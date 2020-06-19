@@ -9,15 +9,14 @@ pagination:
 		<div class="col-sm-12 homePost homePost--firstPost">
 		    <div class="row">
 		    	<div class="col-sm-8">
-		    		<a href="{{ post.url | prepend: site.baseurl }}" class="homePost__image" style="background-image: url('{{ post.image | prepend: site.baseurl }}')">
-			   		</a>
+		    		<div class="homePost__image" style="background-image: url('{{ post.image | prepend: site.baseurl }}')"></div>
 		    	</div>
 
 		    	<div class="col-sm-4">
 		    		{% if post.category %}
 		    			<span class="homePost__category category-{{ post.category | downcase }}">{{ site.data.i18n.ca.[post.category] }}</span>
 	    			{% endif %}
-				    <h3 class="homePost__title">{{ post.title }}</h3>
+				    <h3 class="homePost__title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
 				    {% assign postMonth = post.date | date: "%b" %}
 				    <p class="homePost__date">{{ post.date | date: "%-d" }} {{ site.data.i18n.ca.month.[postMonth] }} {{ post.date | date: "%Y" }}</p>
 				    <div class="homePost__excerpt">{{ post.excerpt }}</div>
