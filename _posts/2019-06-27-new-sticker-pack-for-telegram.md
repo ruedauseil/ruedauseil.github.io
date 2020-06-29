@@ -1,6 +1,6 @@
 ---
 title: New sticker pack for Telegram!
-image: '/images/posts/2019-06-27_banner.png'
+image: '/images/posts/2020-06-29-welcome.jpg'
 category: Design
 ---
 

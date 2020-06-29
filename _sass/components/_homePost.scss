@@ -3,6 +3,7 @@
   margin-bottom: 50px;
 
   &--firstPost {
+
     #{$self}__image {
       background-position: 0 50%;
       background-size: 100% auto;
@@ -18,6 +19,8 @@
 
     #{$self}__title {
       font-size: 1.8em;
+      padding: 40px 0;
+      margin: 0;
     }
 
     #{$self}__date {
@@ -46,6 +49,11 @@
     }
   }
 
+  &__content {
+    background-color: $color-off;
+    height: 100%;
+  }
+
   &__category {
     font-size: 0.8em;
     text-transform: uppercase;
@@ -60,7 +68,7 @@
   }
 
   &__date {
-    color: lighten(#000, 50%);
+    color: darken($color-off, 20%);
     font-size: 0.8em;
     line-height: 1em;
     text-transform: uppercase;
@@ -68,10 +76,5 @@
 
   &__excerpt {
     padding-bottom: 40px;
-  }
-
-  &__readMore {
-    position: absolute;
-    bottom: 0;
   }
 }

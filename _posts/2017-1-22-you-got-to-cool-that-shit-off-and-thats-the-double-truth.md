@@ -3,7 +3,7 @@
 title: You got to cool that off. And that's the double-truth
 featured: true
 author: ahmad
-image: '/images/posts/20.jpg'
+image: '/images/posts/2020-06-29-welcome.jpg'
 ---
 
 Lorem ipsum dolor sit amet, vix ut case porro facilisis, alia possit neglegentur vis te. Has cu eirmod abhorreant, vel civibus efficiantur cu. Eu summo elitr vix, iusto putant maluisset per ut, ne etiam vivendum adipisci vel. Vis omnis tempor accusam ei, justo perpetua liberavisse cu qui. Saperet aliquando adipiscing ius ne, ne facer euripidis est. Pro mundi nostrum suavitate et.

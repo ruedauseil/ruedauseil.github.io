@@ -1,30 +1,41 @@
 ---
 pagination:
-    enabled: true
+enabled: true
 ---
 
 <!-- FIRST POST -->
 {% if paginator.page == 1 %}
-	{% for post in paginator.posts limit:1 %}
-		<div class="col-sm-12 homePost homePost--firstPost">
-		    <div class="row">
-		    	<div class="col-sm-8">
-		    		<div class="homePost__image" style="background-image: url('{{ post.image | prepend: site.baseurl }}')"></div>
-		    	</div>
+{% for post in paginator.posts limit:1 %}
+<div class="col-sm-12 homePost homePost--firstPost">
+    <div class="row">
+        <div class="col-sm-8" style="background-color: #fff;">
+            <a href="{{ post.url | prepend: site.baseurl }}">
+                <div class="homePost__image"
+                     style="background-image: url('{{ post.image | prepend: site.baseurl }}')"></div>
+            </a>
+        </div>
 
-		    	<div class="col-sm-4">
-		    		{% if post.category %}
-		    			<span class="homePost__category category-{{ post.category | downcase }}">{{ site.data.i18n.ca.[post.category] }}</span>
-	    			{% endif %}
-				    <h3 class="homePost__title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-				    {% assign postMonth = post.date | date: "%b" %}
-				    <p class="homePost__date">{{ post.date | date: "%-d" }} {{ site.data.i18n.ca.month.[postMonth] }} {{ post.date | date: "%Y" }}</p>
-				    <div class="homePost__excerpt">{{ post.excerpt }}</div>
-				    <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-outline-primary homePost__readMore">Llegir més</a>
-				</div>
-		    </div>
-		</div>
-	{% endfor %}
+        <div class="col-sm-4">
+            <div class="col-sm-12 homePost__content">
+                {% if post.category %}
+                <span class="homePost__category category-{{ post.category | downcase }}">{{ site.data.i18n.ca[post.category] }}</span>
+                {% endif %}
+                <h3 class="homePost__title text-center"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title
+                    }}</a></h3>
+                {% assign postMonth = post.date | date: "%b" %}
+                <p class="homePost__date text-center">{{ post.date | date: "%-d" }} {{
+                    site.data.i18n.ca.month[postMonth] }}
+                    {{ post.date | date: "%Y" }}</p>
+                <div class="homePost__excerpt text-justify">{{ post.excerpt }}</div>
+                <div class="text-center">
+                    <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-primary homePost__readMore">Llegir
+                        més</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
 {% endif %}
 
 
@@ -33,19 +44,26 @@ pagination:
 {% assign postsOffset = 0 %}
 
 {% if paginator.page == 1 %}
-	{% assign postsLimit = 6 %}
-	{% assign postsOffset = 1 %}
+{% assign postsLimit = 6 %}
+{% assign postsOffset = 1 %}
 {% endif %}
 {% for post in paginator.posts offset:postsOffset limit:postsLimit %}
-    {% include post-card.html %}
+{% include post-card.html %}
 {% endfor %}
 
 <!-- Pagination links -->
 <div class="container text-center">
-  {% if paginator.previous_page %}
+    {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="btn btn-outline-primary">Previous page</a>
-  {% endif %}
-  {% if paginator.next_page %}
+    {% endif %}
+    {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path }}" class="btn btn-primary">Next page</a>
-  {% endif %}
+    {% endif %}
 </div>
+
+<script>
+    $(document).ready(function ($) {
+        let excerptText = $(".homePost__excerpt").children(":first-child");
+        excerptText.html(excerptText.html() + "...");
+    });
+</script>

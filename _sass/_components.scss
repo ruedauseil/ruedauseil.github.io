@@ -1,4 +1,5 @@
 @import "components/homePost";
+@import "components/post";
 
 // To top
 #to-top {
@@ -48,10 +49,9 @@
         &:hover,
         &:not(:disabled):not(.disabled):active,
         &:focus {
-            background-color: darken($color, 10%);
-            border-color: darken($color, 10%);
+            background-color: transparent;
             box-shadow: none;
-            color: #fff;
+            color: $color;
         }
     }
 
@@ -71,51 +71,3 @@
     }
 }
 
-.post {
-    $self: &;
-
-    &__category {
-        display: inline-block;
-        font-size: 0.8em;
-        text-transform: uppercase;
-        color: #fff;
-        padding: 2px 5px;
-    }
-
-
-    &__title {
-        position: relative;
-        margin-bottom: 0;
-
-        &:after {
-            content: "";
-            width: 100%;
-            height: 50%;
-            position: absolute;
-            border-bottom: none !important;
-            z-index: -1;
-            left: 0;
-            top: 50%;
-        }
-
-        span:last-child {
-            background-color: #fff;
-            padding: 0 10px;
-        }
-    }
-
-    &__content {
-        border-top: none !important;
-        padding-top: 50px;
-    }
-
-    &--design {
-        h1:after {
-            border: solid $color-category-design 2px;
-        }
-
-        #{$self}__content {
-            border: solid $color-category-design 2px;
-        }
-    }
-}

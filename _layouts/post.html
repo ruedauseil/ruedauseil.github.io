@@ -3,20 +3,25 @@ layout: default
 ---
 
 <div class="post post--{{ page.category | slugify }} col-sm-12">
-    {% if page.category %}
-        <div class="text-center">
-            <span class="post__category category-{{ page.category | slugify }}">{{ site.data.i18n.ca.[page.category] }}</span>
+    <div class="row">
+        <h1 class="post__title text-center col-12">{{ page.title }}</h1>
+
+        <div class="offset-sm-2 col-sm-8">
+            <div class="post__image" style="background-image: url({{ page.image }});"></div>
         </div>
-    {% endif %}
-    <h1 class="post__title text-center">
-        <span>{{ page.title }}</span>
-    </h1>
-    <div class="post__content">
-        <div class="col-sm-5">
-            <img src="{{ page.image }}" class="img-fluid" />
-        </div>
-        <div class="col-sm-7">
-            <p class="post__date">{{ page.date | date: '%d %b %Y' }}</p>
+        <!--<div class="col-sm-4">
+            <div class="col-sm-12 post__extraInfo">
+                {% if page.category %}
+                <div class="text-center">
+                    <span class="post__category category-{{ page.category | slugify }}">{{ site.data.i18n.ca[page.category] }}</span>
+                </div>
+                {% endif %}
+                <p class="post__date">{{ page.date | date: '%d %b %Y' }}</p>
+            </div>
+        </div>-->
+
+
+        <div class="post__content offset-sm-2 col-sm-8">
             {{ content }}
         </div>
     </div>
