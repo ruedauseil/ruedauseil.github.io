@@ -13,10 +13,6 @@ $(document).ready(function ($) {
         if (window.scrollY > 200) {
             $("#to-top").fadeIn();
 
-            if (!header.hasClass("scrolled")) {
-                headerMenu.hide();
-                headerMenu.fadeIn();
-            }
             header.addClass("scrolled");
         } else {
             $("#to-top").fadeOut(100);
