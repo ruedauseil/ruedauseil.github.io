@@ -52,6 +52,7 @@
   &__content {
     background-color: $color-off;
     height: 100%;
+    padding-bottom: 20px;
   }
 
   &__category {
@@ -68,7 +69,7 @@
   }
 
   &__date {
-    color: darken($color-off, 20%);
+    color: darken($color-off, 30%);
     font-size: 0.8em;
     line-height: 1em;
     text-transform: uppercase;
